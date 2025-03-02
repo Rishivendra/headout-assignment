@@ -49,7 +49,7 @@ The Globetrotter Challenge is designed to be both fun and engaging. The applicat
 Destination Endpoints
 GET /headout/game/api/destination/random
 Retrieves a random destination along with a clue and multiple-choice options.
-Response Example:
+**Response Example:**
 
 {
   "clue": "This city is home to a famous tower that sparkles every night.",
@@ -57,16 +57,18 @@ Response Example:
   "options": ["Rome", "Paris", "London", "Berlin"],
   "country": "France"
 }
+
 POST /headout/game/api/destination/guess
-Checks the user's guess and updates their score. Request Body Example:
+Checks the user's guess and updates their score. 
+**Request Body Example:**
 
 {
   "destinationCity": "Paris",
   "guess": "Paris",
   "username": "john_doe"
 }
-Response Example:
 
+**Response Example:**
 {
   "result": "correct",
   "message": "🎉 Correct! Here's a fun fact:",
@@ -80,18 +82,18 @@ Registers a new user. Request Body Example:
 {
   "username": "john_doe"
 }
-Response Example:
+**Response Example:**
 
 {
   "username": "john_doe",
   "score": 0
 }
+
 GET /headout/game/api/user/challenge
 Generates a challenge invitation message for a friend. Query Parameter Example:
-
 ?username=john_doe
-Response Example:
 
+**Response Example:**
 {
   "challengeMessage": "Hey, I'm playing the Globetrotter Challenge! My current score is 3. Can you beat me?",
   "inviteLink": "http://yourapp.com/play?ref=john_doe"
